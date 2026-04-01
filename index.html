@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion de Stocks</title>
+  <title>Giriş | Stok Kontrol</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Gestion des Stocks</h1>
+    <h1>Stok Yönetim Sistemi</h1>
 
-    <!-- Formulaire pour ajouter un produit -->
-    <div class="form-container">
-      <h2>Ajouter un Produit</h2>
-      <form id="stock-form">
-        <input type="text" id="product-name" placeholder="Nom du produit" required>
-        <input type="number" id="product-quantity" placeholder="Quantité initiale" required>
-        <button type="submit">Ajouter</button>
+    <!-- Giriş Formu -->
+    <div id="login-form">
+      <h2>Giriş Yap</h2>
+      <form>
+        <input type="email" id="login-email" placeholder="E-posta" required>
+        <input type="password" id="login-password" placeholder="Şifre" required>
+        <button type="button" onclick="login()">Giriş Yap</button>
       </form>
+      <p>Hesabınız yok mu? <span onclick="showRegister()">Kayıt Olun</span></p>
     </div>
 
-    <!-- Tableau des produits -->
-    <h2>Liste des Stocks</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Nom du Produit</th>
-          <th>Quantité</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody id="stock-list">
-        <!-- Les produits ajoutés vont apparaître ici -->
-      </tbody>
-    </table>
+    <!-- Kayıt Formu -->
+    <div id="register-form" style="display:none;">
+      <h2>Kayıt Ol</h2>
+      <form>
+        <input type="text" id="register-name" placeholder="Ad Soyad" required>
+        <input type="email" id="register-email" placeholder="E-posta" required>
+        <input type="password" id="register-password" placeholder="Şifre" required>
+        <button type="button" onclick="register()">Kayıt Ol</button>
+      </form>
+      <p>Zaten hesabınız var mı? <span onclick="showLogin()">Giriş Yapın</span></p>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
