@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de Stocks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestion des Stocks</h1>
+
+    <!-- Formulaire pour ajouter un produit -->
+    <div class="form-container">
+      <h2>Ajouter un Produit</h2>
+      <form id="stock-form">
+        <input type="text" id="product-name" placeholder="Nom du produit" required>
+        <input type="number" id="product-quantity" placeholder="Quantité initiale" required>
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+
+    <!-- Tableau des produits -->
+    <h2>Liste des Stocks</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom du Produit</th>
+          <th>Quantité</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="stock-list">
+        <!-- Les produits ajoutés vont apparaître ici -->
+      </tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
